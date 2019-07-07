@@ -44,18 +44,18 @@ def stops_between_stations (start_line, start_station, end_line, end_station)
     if start_line == end_line
       (start_station_index - end_station_index).abs
 
-    else #IF NOT : 
+    else #IF NOT :
 
-    #Find the intersect station of the first line
-    start_line_park_street_index = subway_lines[start_line].index("Park Street")
+    #Find the intersection station of the first line
+    start_line_intersection_index = subway_lines[start_line].index("Park Street")
     #Calculate the distance between start_station and the intersect station 
-    trip_to_park_street = (start_station_index - start_line_park_street_index).abs
-    #Find the intersect station of the second line
-    end_line_park_street_index = subway_lines[end_line].index("Park Street")
+    trip_to_intersection = (start_station_index - start_line_intersection_index).abs
+    #Find the intersection station of the second line
+    end_line_intersection_index = subway_lines[end_line].index("Park Street")
     #Calculate the distance between end_station and the intersect station 
-    trip_to_destination = (end_station_index - end_line_park_street_index).abs
+    trip_to_destination = (end_station_index - end_line_intersection_index).abs
   
     #calculate the total
-    total_trip = trip_to_park_street + trip_to_destination
+    total_trip = trip_to_intersection + trip_to_destination
     end
 end
