@@ -55,9 +55,9 @@ def stops_between_stations(start_line, start_station, end_line, end_station)
     
     trip_to_destination =(end_station_index - end_line_park_street_ndex).abs
     
-    totalTrip = trip_to_park_street + trip_to_destination
+    total_trip = trip_to_park_street + trip_to_destination
     
-    return total_trip
+     total_trip
 end
 
 
