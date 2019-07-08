@@ -6,9 +6,9 @@ def stops_between_stations
            Orange: ["North Station", "Haymarket", "Park Street", "State", "Downtown Crossing", "Chinatown", "Back Bay", "Forest Hills"],
      }
      if (startLine == endLine)
-         (subwayLines[startLine.to_sym].index(startStation) - subwayLines[endLine.to_sym].index(endStation)).abs
+         (subwayLines[startLine].index(startStation) - subwayLines[endLine].index(endStation)).abs
        else
-         (subwayLines[startLine.to_sym].index(startStation) - subwayLines[startLine.to_sym].index("Park Street")).abs + (subwayLines[endLine.to_sym].index("Park Street") - subwayLines[endLine.to_sym].index(endStation)).abs
+         (subwayLines[startLine].index(startStation) - subwayLines[startLine].index("Park Street")).abs + (subwayLines[endLine].index("Park Street") - subwayLines[endLine].index(endStation)).abs
        end
      
      
