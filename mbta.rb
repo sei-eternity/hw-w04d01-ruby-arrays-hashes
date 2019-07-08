@@ -13,11 +13,11 @@ counter=0
 i=start_index
 if start_index < end_index 
     while i+1 <= end_index do
-        p "Rider arrives at #{line} Line and #{subway_lines[line][i]}."
+        p "Rider arrives at #{line} Line and #{subway_lines[line].index(i)}."
         counter+=1
     else  
         while i-1 >= end_index do
-            p "Rider arrives at #{line} Line and #{subway_lines[line][i]}."
+            p "Rider arrives at #{line} Line and #{subway_lines[line].index(i)}."
             counter+=1
         end 
         
