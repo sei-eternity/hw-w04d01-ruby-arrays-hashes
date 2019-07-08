@@ -5,6 +5,13 @@ def stops_between_stations
            Green:["Government Center", "Park Street", "Boylston" , "Arlington", "Copley", "Hynes", "Kenmore"],
            Orange: ["North Station", "Haymarket", "Park Street", "State", "Downtown Crossing", "Chinatown", "Back Bay", "Forest Hills"],
      }
+    
+    stopsBetweenStations = (startLine, startStation, endLine, endStation) {
+   
+    startStationIndex = subwayLines[startLine].indexOf(startStation)
+  
+    endStationIndex = subwayLines[endLine].indexOf(endStation)
+        
      if (startLine == endLine)
          (subwayLines[startLine].index(startStation) - subwayLines[endLine].index(endStation)).abs
        else
@@ -17,7 +24,10 @@ def stops_between_stations
        if (startLine === endLine) {
          return Math.abs(startStationIndex - endStationIndex)
        }
-       stops_between_stations("Red", "Davis", "Red", "Alewife")
-       stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') 
-
+       tripToDestination = Math.abs(endStationIndex - endLineParkStreetIndex)
+       totalTrip = tripToParkStreet + tripToDestination
+  
+       return totalTrip
+      }
+        }
     end
